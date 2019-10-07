@@ -10,51 +10,63 @@
 		}
 		#content{
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(8, minmax(150px, auto));
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: repeat(8, minmax(100px, auto));
 			grid-column-gap: 10px;
 			grid-row-gap: 10px;
 			max-width: 960px;
 			margin: 0 auto;
-			align-items: start; /*in column*/ /*replaces default strech*/
-			justify-items: end; /*in row*/
+
 		}
 		#content div{
 			background: #3bbced;
 			padding: 30px;
 		}
-		#content div:nth-child(even){
-			background: #777;
-			padding: 30px;
+
+		header{
+			grid-column: 1 / 13;
 		}
 
-		.five{
-			align-self: center;
-			justify-self: center;
+		main{
+			grid-column: 4 / 13;
+			grid-row: 2 / 4;
 		}
 
+		aside{
+			grid-column: 1 / 4;
+			grid-row: 2 / 3;
+		}
+
+		nav{
+			grid-column: 1 / 4;
+			grid-row: 3 / 4;
+		}
+
+		section{
+			grid-column: 1 / 13;
+			grid-row: 4 / 6;
+		}
+
+		footer{
+			grid-column: 1 / 13;
+			grid-row: 6 / 7;
+		}
+
+		#content > *{
+			background-color: #3bbced;
+		}
 	</style>
 </head>
 <body>
 
 	<div id="content">
+		<header>Header</header>
+		<main>Main</main>
+		<section>Section</section>
+		<aside>Aside</aside>
+		<nav>Nav</nav>
+		<footer>Footer</footer>
 
-		<div class="one">1</div>
-		<div class="two">2</div>
-		<div class="three">3</div>
-		<div class="four">
-			<div class="nested">
-				<p>1</p>
-				<p>2</p>
-				<p>3</p>
-				<p>4</p>
-			</div>
-		</div>
-		<div class="five">5</div>
-		<div class="six">6</div>
-		<div class="seven">7</div>
-		<div class="eight">8</div>
-		<div class="nine">9</div>
 
 	</div>
 
